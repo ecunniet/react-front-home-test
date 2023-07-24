@@ -71,3 +71,33 @@ export const cucumber: IngredientType = {
   type: "vegetables",
   unit: "unit",
 };
+
+export const milk: IngredientType = {
+  name: "lait",
+  type: "produit laitier",
+  unit: "l",
+  prefix: "de",
+}
+
+export const beer: IngredientType = {
+  name: "bière",
+  type: "boisson alcoolisée",
+  unit: "l",
+  prefix: "de",
+}
+
+export const salt: IngredientType = {
+  name: "sel",
+  unit: "g",
+  prefix: "de"
+}
+
+export const vanillaSugar: IngredientType = {
+  name: "sucre vanillé",
+  prefix: "de"
+}
+
+export const oliveOil: IngredientType = {
+  name: "huile d'olive",
+  prefix: "d'"
+}

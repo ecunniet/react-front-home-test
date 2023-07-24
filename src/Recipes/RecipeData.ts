@@ -14,12 +14,18 @@ import {
   salad,
   cucumber,
   feta,
+  milk,
+  beer,
+  salt,
+  vanillaSugar,
+  oliveOil
 } from "../Ingredients/IngredientData";
 
 import {
   stepsFondantChocolat,
   stepsPavlova,
   stepsTarteAuxPoires,
+  stepsBretonPancakes,
 } from "../Steps/StepData";
 
 import {
@@ -98,11 +104,31 @@ const waldorfSalad: RecipeType = {
   tags: [appetizer, summer, vegan],
 };
 
+const bretonPancakes: RecipeType = {
+  nom: "Crêpes bretonnes",
+  description: "Les crêpes bretonnes, c'est le dessert parfait pour les soirées entre amis.",
+  imageURL:
+    "https://img-3.journaldesfemmes.fr/f6FIccfzYhulDAJMYidb17q4dO0=/750x500/smart/3343a1bf04ac4c68ab9bc1ff3b6834bf/recipe-jdf/358116.jpg",
+  ingredients: [flour, egg, milk, beer, salt, vanillaSugar, oliveOil],
+  etapes: stepsBretonPancakes,
+  ingredientsWithQuantity: [
+    { ingredient: flour, quantity: 300, unit: "g" },
+    { ingredient: egg, quantity: 4 },
+    { ingredient: milk, quantity: 500, unit: "cl" },
+    { ingredient: beer, quantity: 20, unit: "cl" },
+    { ingredient: salt, quantity: 1, unit: " pincée" },
+    { ingredient: vanillaSugar, quantity: 1, unit: " sachet" },
+    { ingredient: oliveOil, quantity: 1, unit: " cuillère à soupe" }
+  ],
+  tags: [dessert],
+};
+
 export const allRecipes: ListOfRecipes = [
   pavlova,
   fondantChocolat,
   pearPie,
   waldorfSalad,
+  bretonPancakes,
 ];
 
 export const summerRecipes = allRecipes.filter((recipe) => {
