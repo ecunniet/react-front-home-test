@@ -1,5 +1,6 @@
-import Ingredient from "./Ingredient";
-import { IngredientWithQuantityType } from "./IngredientWithQuantityType";
+import Ingredient from "../../Ingredient";
+import { IngredientWithQuantityType } from "../IngredientWithQuantityType";
+import './IngredientWithQuantity'
 
 export const IngredientWithQuantity = ({
   ingredientWithQuantity,
@@ -7,11 +8,7 @@ export const IngredientWithQuantity = ({
   ingredientWithQuantity: IngredientWithQuantityType;
 }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <div className="ingredient_with_quantity-container">
       {ingredientWithQuantity.quantity}
       {ingredientWithQuantity.unit}
       &nbsp;

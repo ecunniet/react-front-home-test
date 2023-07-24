@@ -1,4 +1,4 @@
-import Step from "./Step";
+import Step from "./Step/Step";
 import { StepType } from "./StepType";
 
 export const Steps = ({ steps }: { steps: StepType[] }) => {

@@ -1,28 +1,17 @@
 import { ListOfRecipes } from "./RecipeType";
-import Recipe from "./Recipe";
+import Recipe from "./Recipe/Recipe";
+import './Recipes.css';
 
 export const Recipes = ({ recipes }: { recipes: ListOfRecipes }) => {
   return (
-    <div
-      style={{
-        padding: "10px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: "whitesmoke",
-          borderWidth: "10px",
-          borderColor: "black",
-          maxWidth: "800px",
-        }}
-      >
+    <div className="recipes-list-container">
+
+      <div className="recipes-list">
         {recipes.map((obj) => (
           <Recipe recipe={obj} key={obj.name} />
         ))}
       </div>
+
     </div>
   );
 };

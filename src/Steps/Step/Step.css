@@ -1,0 +1,12 @@
+.step-container {
+    background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px;
+}
+
+.step-ingredients-container {
+    padding: 10px;
+}

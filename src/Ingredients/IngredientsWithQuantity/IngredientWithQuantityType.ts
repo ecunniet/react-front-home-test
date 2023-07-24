@@ -1,4 +1,4 @@
-import { IngredientType } from "./IngredientType";
+import { IngredientType } from "../IngredientType";
 
 export type IngredientWithQuantityType = {
   ingredient: IngredientType;
