@@ -12,7 +12,7 @@ import {
   veganRecipes,
   chocolateDessertRecipes,
 } from "./Recipes/RecipeData";
-import { TagList } from "./Tagfilter/ListeDesTags";
+import TagList from "./Tagfilter/TagList";
 import { tagList } from "./Tags/TagData";
 
 export default function App() {
