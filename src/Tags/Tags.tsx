@@ -14,7 +14,7 @@ export const Tags = ({ tags }: { tags: TagType[] }) => {
       }}
     >
       {tags.map((obj) => (
-        <Tag tag={obj} />
+        <Tag tag={obj} key={obj.id} />
       ))}
     </div>
   );

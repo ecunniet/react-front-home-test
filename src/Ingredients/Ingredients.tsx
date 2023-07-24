@@ -9,7 +9,7 @@ export const Ingredients = ({
   return (
     <>
       {ingredients &&
-        ingredients.map((ingredient) => <Ingredient ingredient={ingredient} />)}
+        ingredients.map((ingredient) => <Ingredient ingredient={ingredient} key={ingredient.name} />)}
     </>
   );
 };

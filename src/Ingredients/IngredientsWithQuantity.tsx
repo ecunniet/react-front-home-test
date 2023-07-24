@@ -9,7 +9,7 @@ export const IngredientsWithQuantity = ({
   return (
     <>
       {ingredientsWithQuantity.map((obj) => (
-        <IngredientWithQuantity ingredientWithQuantity={obj} />
+        <IngredientWithQuantity ingredientWithQuantity={obj} key={obj.ingredient.name} />
       ))}
     </>
   );
