@@ -31,7 +31,9 @@ import {
 import {
   appetizer,
   autumn,
+  breton,
   dessert,
+  noEggs,
   summer,
   vegan,
   winter,
@@ -84,7 +86,7 @@ const pearPie: RecipeType = {
     { ingredient: sugar, quantity: 150, unit: "g" },
     { ingredient: egg, quantity: 2 },
   ],
-  tags: [dessert, autumn],
+  tags: [dessert, autumn, noEggs],
 };
 
 const waldorfSalad: RecipeType = {
@@ -101,7 +103,7 @@ const waldorfSalad: RecipeType = {
     },
     { ingredient: feta, quantity: 150, unit: "g" },
   ],
-  tags: [appetizer, summer, vegan],
+  tags: [appetizer, summer, vegan, noEggs],
 };
 
 const bretonPancakes: RecipeType = {
@@ -120,7 +122,7 @@ const bretonPancakes: RecipeType = {
     { ingredient: vanillaSugar, quantity: 1, unit: " sachet" },
     { ingredient: oliveOil, quantity: 1, unit: " cuillère à soupe" }
   ],
-  tags: [dessert],
+  tags: [dessert, breton],
 };
 
 export const allRecipes: ListOfRecipes = [

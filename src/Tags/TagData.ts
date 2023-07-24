@@ -60,6 +60,27 @@ export const winter: TagType = {
   color: "blue",
 };
 
+
+export const noEggs: TagType = {
+  id: "noEggs",
+  name: {
+    fr: "sans oeufs",
+    en: "eggs free",
+  },
+  type: "diet",
+  color: "turquoise",
+};
+
+export const breton: TagType = {
+  id: "breton",
+  name: {
+    fr: "breton",
+    en: "breton",
+  },
+  type: "region",
+  color: "grey",
+};
+
 export const tagList: TagType[] = [
   summer,
   winter,
@@ -67,4 +88,6 @@ export const tagList: TagType[] = [
   appetizer,
   autumn,
   vegan,
+  noEggs,
+  breton,
 ];
