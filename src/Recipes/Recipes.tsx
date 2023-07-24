@@ -20,7 +20,7 @@ export const Recipes = ({ recipes }: { recipes: ListOfRecipes }) => {
         }}
       >
         {recipes.map((obj) => (
-          <Recipe recipe={obj} key={obj.nom} />
+          <Recipe recipe={obj} key={obj.name} />
         ))}
       </div>
     </div>

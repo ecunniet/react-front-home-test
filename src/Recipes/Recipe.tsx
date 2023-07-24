@@ -36,7 +36,7 @@ export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
           width: "100%",
         }}
       >
-        <h2>Nom de la recette: {recipe.nom}</h2>
+        <h2>Nom de la recette: {recipe.name}</h2>
         <div
           style={{
             padding: "10px",
@@ -92,7 +92,7 @@ export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
               {showSteps ? "Masquer" : "Afficher"}
             </button>
           </div>
-          {recipe.etapes && showSteps && <Steps steps={recipe.etapes} />}
+          {recipe.steps && showSteps && <Steps steps={recipe.steps} />}
         </div>
       </div>
     </div>

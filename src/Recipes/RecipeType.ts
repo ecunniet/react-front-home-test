@@ -4,11 +4,11 @@ import { IngredientWithQuantityType } from "../Ingredients/IngredientWithQuantit
 import { TagType } from "../Tags/TagType";
 
 export type RecipeType = {
-  nom: string;
+  name: string;
   description: string;
   imageURL: string;
   ingredients?: IngredientType[];
-  etapes?: StepType[];
+  steps?: StepType[];
   ingredientsWithQuantity: IngredientWithQuantityType[];
   tags: TagType[];
 };
