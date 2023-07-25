@@ -1,13 +1,20 @@
 import { ListOfRecipes } from "./RecipeType";
 import Recipe from "./Recipe/Recipe";
 import './Recipes.css';
+import { useContext, useMemo } from "react";
+import { ActiveFilterContext } from "../App";
+import { filterRecipes } from "./RecipeData";
 
-export const Recipes = ({ recipes }: { recipes: ListOfRecipes }) => {
+export const Recipes = () => {
+  const { activeFilters } = useContext(ActiveFilterContext)
+
+  const recipesList: ListOfRecipes = useMemo(() => filterRecipes(activeFilters), [activeFilters])
+
   return (
     <div className="recipes-list-container">
 
       <div className="recipes-list">
-        {recipes.map((obj) => (
+        {recipesList.map((obj) => (
           <Recipe recipe={obj} key={obj.name} />
         ))}
       </div>

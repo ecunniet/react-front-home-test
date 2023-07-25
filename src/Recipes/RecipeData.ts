@@ -186,3 +186,9 @@ export const veganRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const tagIds: string[] = recette.tags.map((tag) => tag.id);
   return tagIds.includes("vegan");
 });
+
+
+export const filterRecipes = (activeTagFilters: string[]) => allRecipes.filter((recipe) => {
+  const recipesTags = recipe.tags.map((tag) => tag.id);
+  return activeTagFilters.every(tagFilter => recipesTags.includes(tagFilter));
+});
