@@ -1,13 +1,14 @@
-const ActiveFilter = () => {
-    const activeFilters = ['chocolate', 'sugar', 'summer', 'dessert', 'chocolate dessert', 'eggs free', 'autumn', 'vegan']
+import { useContext } from "react";
+import { ActiveFilterContext } from "../App";
 
-    const dissmissFilter = (filter: string) => {
-        console.log('dismissing' + filter)
-    }
+const ActiveFilter = () => {
+    const { activeFilters, removeFilter } = useContext(ActiveFilterContext)
+    //    const activeFilters = ['chocolate', 'sugar', 'summer', 'dessert', 'chocolate dessert', 'eggs free', 'autumn', 'vegan']
+
     return (
         <>
             {activeFilters.map((filter) => (
-                <button key={filter} onClick={() => dissmissFilter(filter)}>{filter}</button>
+                <button key={filter} onClick={() => removeFilter(filter)}>{filter}</button>
             ))}
         </>
     )
