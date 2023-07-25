@@ -97,15 +97,17 @@ const pearPie: RecipeType = {
     "La tarte au poire est une tarte faite à base d'un appareil à l'amande, d'une pâte sablée et de poires",
   imageURL:
     "https://assets.afcdn.com/recipe/20201228/116793_w1200h800c1cx1060cy707cxb2121cyb1414.webp",
-  ingredients: [almondPowder, sugar, butter, flour, pear],
+  ingredients: [almondPowder, sugar, butter, flour, pear, egg],
   steps: stepsPearPie,
   ingredientsWithQuantity: [
     { ingredient: pear, quantity: 2 },
     { ingredient: almondPowder, quantity: 50, unit: "g" },
-    { ingredient: sugar, quantity: 150, unit: "g" },
-    { ingredient: egg, quantity: 2 },
+    { ingredient: sugar, quantity: 100, unit: "g" },
+    { ingredient: egg, quantity: 3 },
+    { ingredient: flour, quantity: 175, unit: "g" },
+    { ingredient: butter, quantity: 300, unit: "g" }
   ],
-  tags: [dessert, autumn, noEggs],
+  tags: [dessert, autumn],
 };
 
 const waldorfSalad: RecipeType = {
@@ -133,10 +135,6 @@ export const allRecipes: ListOfRecipes = [
   waldorfSalad,
 ];
 
-export const summerRecipes = allRecipes.filter((recipe) => {
-  const recipesTags = recipe.tags.map((tag) => tag.id);
-  return recipesTags.includes("summer");
-});
 
 export const sugarRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const ingredientsList: string[] | undefined = recette.ingredients?.map(
@@ -153,10 +151,6 @@ export const chocolateRecipes: RecipeType[] = allRecipes.filter((recette) => {
   return ingredientsList && ingredientsList.includes("chocolat");
 });
 
-export const dessertRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const tags: string[] = recette.tags.map((tag) => tag.id);
-  return tags.includes("dessert");
-});
 
 export const chocolateDessertRecipes: RecipeType[] = allRecipes.filter(
   (recette) => {
@@ -175,16 +169,6 @@ export const noEggsRecipes: RecipeType[] = allRecipes.filter((recette) => {
     ? recette.ingredients.map((ingredient) => ingredient.name)
     : [];
   return !ingredientsString.includes("oeuf");
-});
-
-export const autumnRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const tagIds = recette.tags.map((tag) => tag.id);
-  return tagIds.includes("autumn");
-});
-
-export const veganRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const tagIds: string[] = recette.tags.map((tag) => tag.id);
-  return tagIds.includes("vegan");
 });
 
 

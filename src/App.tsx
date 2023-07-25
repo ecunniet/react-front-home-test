@@ -1,9 +1,9 @@
 import "./styles.css";
 import Recipes from "./Recipes/Recipes";
-import TagList from "./Tagfilter/TagList";
 import { tagList } from "./Tags/TagData";
 import ActiveFilter from "./ActiveFilter/ActiveFilter";
 import { createContext, useState } from "react";
+import { Tags } from "./Tags/Tags";
 
 export const ActiveFilterContext =
   createContext<{ activeFilters: string[], addFilter: (filterToAdd: string) => void, removeFilter: (filterToRemove: string) => void }>({
@@ -29,7 +29,7 @@ export default function App() {
     <ActiveFilterContext.Provider value={{ activeFilters, addFilter, removeFilter }}>
       <div className="App">
         Liste des recettes
-        <TagList tags={tagList} />
+        <Tags tags={tagList} />
         <ActiveFilter />
         <Recipes />
       </div>

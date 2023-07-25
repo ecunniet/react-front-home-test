@@ -1,4 +1,5 @@
 import {
+  almondPowder,
   beer,
   butter,
   chocolate,
@@ -7,6 +8,7 @@ import {
   flour,
   milk,
   oliveOil,
+  pear,
   redFruits,
   salt,
   sugar,
@@ -148,10 +150,18 @@ export const stepsPearPie: StepType[] = [
     description:
       "Incorporer les oeufs puis ajouter les amandes moulues et la farine",
     order: 4,
+    ingredients: [
+      { ingredient: almondPowder, quantity: 50, unit: "g" },
+      { ingredient: flour, quantity: 25, unit: "g" },
+      { ingredient: egg, quantity: 2 },
+    ]
   },
   {
     description:
       "Verser la préparation sur le fond de la pâte. Disposer les poires. Enfourner 50 mn à 180°",
     order: 5,
+    ingredients: [
+      { ingredient: pear, quantity: 2 },
+    ]
   },
 ];
