@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ActiveFilterContext } from "../App";
+import './ActiveFilter.css'
 
 const ActiveFilter = () => {
     const { activeFilters, removeFilter } = useContext(ActiveFilterContext)
@@ -7,7 +8,8 @@ const ActiveFilter = () => {
     return (
         <>
             {activeFilters.map((filter) => (
-                <button key={filter.id} onClick={() => removeFilter(filter)}>{filter.name.fr}</button>
+                <button className="filter-button" key={filter.id} onClick={() => removeFilter(filter)}>
+                    <span className="cross">x&nbsp;</span>{filter.name.fr}</button>
             ))}
         </>
     )

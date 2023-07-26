@@ -1,0 +1,11 @@
+.filter-button {
+    margin: 5px;
+}
+
+.cross {
+    display: none;
+}
+
+.filter-button:hover>.cross {
+    display: inline-block;
+}

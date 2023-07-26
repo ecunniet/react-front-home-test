@@ -6,8 +6,14 @@ import { createContext, useState } from "react";
 import Tags from "./Tags/Tags";
 import { TagType } from "./Tags/TagType";
 
+type ActiveFilterContextType = {
+  activeFilters: TagType[],
+  addFilter: (filterToAdd: TagType) => void,
+  removeFilter: (filterToRemove: TagType) => void
+}
+
 export const ActiveFilterContext =
-  createContext<{ activeFilters: TagType[], addFilter: (filterToAdd: TagType) => void, removeFilter: (filterToRemove: TagType) => void }>({
+  createContext<ActiveFilterContextType>({
     activeFilters: [],
     addFilter: () => { },
     removeFilter: () => { },
