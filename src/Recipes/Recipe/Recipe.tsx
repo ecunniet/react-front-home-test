@@ -41,18 +41,19 @@ export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
             />
           )}
         </div>
-
-        <div className="recipe-steps-container">
-          <div className="recipe-steps-controls">
-            Etapes de la recette:
-            <button onClick={() => setShowSteps(!showSteps)}>
-              {showSteps ? "Masquer" : "Afficher"}
-            </button>
+        {recipe.steps && (
+          <div className="recipe-steps-container">
+            <div className="recipe-steps-controls">
+              Etapes de la recette:
+              <button onClick={() => setShowSteps(!showSteps)}>
+                {showSteps ? "Masquer" : "Afficher"}
+              </button>
+            </div>
+            {showSteps && <Steps steps={recipe.steps} />}
           </div>
-          {recipe.steps && showSteps && <Steps steps={recipe.steps} />}
-        </div>
+        )}
       </div>
-    </div>
+    </div >
   );
 };
 

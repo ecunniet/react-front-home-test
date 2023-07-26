@@ -83,10 +83,10 @@ export const breton: TagType = {
 
 export const tagList: TagType[] = [
   summer,
-  winter,
-  dessert,
-  appetizer,
   autumn,
+  winter,
+  appetizer,
+  dessert,
   vegan,
   noEggs,
   breton,

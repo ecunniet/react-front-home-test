@@ -102,7 +102,7 @@ export const stepsPavlova: StepType[] = [
   {
     description: "Préparer la meringue française.",
     ingredients: [
-      { ingredient: sugar, quantity: 100 },
+      { ingredient: sugar, quantity: 100, unit: "g" },
       { ingredient: egg, quantity: 3 },
     ],
     order: 1,
@@ -113,7 +113,6 @@ export const stepsPavlova: StepType[] = [
       { ingredient: sugar, quantity: 50, unit: "g" },
       { ingredient: cream, quantity: 20, unit: "cl" },
     ],
-
     order: 2,
   },
   {

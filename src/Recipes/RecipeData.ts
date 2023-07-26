@@ -67,7 +67,8 @@ const chocolateFondant: RecipeType = {
   ingredients: [chocolate, egg, flour, butter, sugar],
   steps: stepsChocolateFondant,
   ingredientsWithQuantity: [
-    { ingredient: sugar, quantity: 200, unit: "g" },
+    { ingredient: egg, quantity: 3 },
+    { ingredient: sugar, quantity: 100, unit: "g" },
     { ingredient: flour, quantity: 50, unit: "g" },
     { ingredient: chocolate, quantity: 200, unit: "g" },
     { ingredient: butter, quantity: 150, unit: "g" },
@@ -80,10 +81,10 @@ const pavlova: RecipeType = {
   description: "La pavlova est un dessert à base de meringue et de fruits",
   imageURL:
     "https://www.mycake.fr/wp-content/uploads/2019/10/rs_Pavlova_4x3.jpg",
-  ingredients: [sugar, flour, redFruits, egg, cream],
+  ingredients: [sugar, redFruits, egg, cream],
   steps: stepsPavlova,
   ingredientsWithQuantity: [
-    { ingredient: sugar, quantity: 100, unit: "g" },
+    { ingredient: sugar, quantity: 150, unit: "g" },
     { ingredient: egg, quantity: 3 },
     { ingredient: redFruits, quantity: 100, unit: "g" },
     { ingredient: cream, quantity: 20, unit: "cl" },
@@ -163,14 +164,6 @@ export const chocolateDessertRecipes: RecipeType[] = allRecipes.filter(
     );
   }
 );
-
-export const noEggsRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const ingredientsString: string[] = recette.ingredients
-    ? recette.ingredients.map((ingredient) => ingredient.name)
-    : [];
-  return !ingredientsString.includes("oeuf");
-});
-
 
 export const filterRecipes = (activeTagFilters: string[]) => allRecipes.filter((recipe) => {
   const recipesTags = recipe.tags.map((tag) => tag.id);
