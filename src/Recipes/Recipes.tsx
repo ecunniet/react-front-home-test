@@ -14,9 +14,9 @@ const Recipes = () => {
     <div className="recipes-list-container">
 
       <div className="recipes-list">
-        {recipesList.map((obj) => (
+        {recipesList.length > 0 ? recipesList.map((obj) => (
           <Recipe recipe={obj} key={obj.name} />
-        ))}
+        )) : "Aucune recette ne semble correspondre à votre recherche."}
       </div>
 
     </div>
