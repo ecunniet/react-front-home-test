@@ -1,5 +1,5 @@
 import { IngredientWithQuantityType } from "./IngredientWithQuantityType";
-import { IngredientWithQuantity } from "./IngredientWithQuantity/IngredientWithQuantity";
+import IngredientWithQuantity from "./IngredientWithQuantity/IngredientWithQuantity";
 
 export const IngredientsWithQuantity = ({
   ingredientsWithQuantity

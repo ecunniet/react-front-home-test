@@ -13,7 +13,7 @@ import {
   salt,
   sugar,
   vanillaSugar,
-} from "../Ingredients/IngredientData";
+} from "../IngredientsWithQuantity/IngredientWithQuantity/Ingredient/IngredientData";
 
 import { StepType } from "./StepType";
 
@@ -33,8 +33,8 @@ export const stepsBretonPancakes: StepType[] = [
       "Ajouter le sucre vanillé et la pincée de sel.",
     order: 2,
     ingredients: [
-      { ingredient: vanillaSugar, quantity: 1, unit: " sachet" },
-      { ingredient: salt, quantity: 1, unit: " pincée" },
+      { ingredient: vanillaSugar, quantity: 1, unit: "sachet" },
+      { ingredient: salt, quantity: 1, unit: "pincée" },
     ],
   },
   {
@@ -47,20 +47,12 @@ export const stepsBretonPancakes: StepType[] = [
       "Au bout d'une heure, faire chauffer une poêle, une fois chaude, verser un peu d'huile pour graisser la poêle.",
     order: 4,
     ingredients: [
-      { ingredient: oliveOil, quantity: 1, unit: " cuillère à soupe" }
-    ]
-  },
-  {
-    description:
-      "Au bout d'une heure, faire chauffer une poêle, une fois chaude, verser un peu d'huile pour graisser la poêle.",
-    order: 5,
-    ingredients: [
-      { ingredient: oliveOil, quantity: 1, unit: " cuillère à soupe" }
+      { ingredient: oliveOil, quantity: 1, unit: "cuillère à soupe" }
     ]
   },
   {
     description: "Verser une demi-louche de la pâte à crêpe et faire cuire 1 à 2 minutes par face. Répeter l'opération pour chaque crêpe.",
-    order: 6,
+    order: 5,
   }
 ];
 

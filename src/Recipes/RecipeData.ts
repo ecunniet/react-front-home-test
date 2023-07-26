@@ -19,7 +19,7 @@ import {
   salt,
   sugar,
   vanillaSugar,
-} from "../Ingredients/IngredientData";
+} from "../IngredientsWithQuantity/IngredientWithQuantity/Ingredient/IngredientData";
 
 import {
   stepsBretonPancakes,
@@ -52,9 +52,9 @@ const bretonPancakes: RecipeType = {
     { ingredient: egg, quantity: 4 },
     { ingredient: milk, quantity: 500, unit: "cl" },
     { ingredient: beer, quantity: 20, unit: "cl" },
-    { ingredient: salt, quantity: 1, unit: " pincée" },
-    { ingredient: vanillaSugar, quantity: 1, unit: " sachet" },
-    { ingredient: oliveOil, quantity: 1, unit: " cuillère à soupe" }
+    { ingredient: salt, quantity: 1, unit: "pincée" },
+    { ingredient: vanillaSugar, quantity: 1, unit: "sachet" },
+    { ingredient: oliveOil, quantity: 1, unit: "cuillère à soupe" }
   ],
   tags: [dessert, breton],
 };

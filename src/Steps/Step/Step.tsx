@@ -1,4 +1,4 @@
-import IngredientsWithQuantity from "../../Ingredients/IngredientsWithQuantity/IngredientsWithQuantity";
+import IngredientsWithQuantity from "../../IngredientsWithQuantity/IngredientsWithQuantity";
 import { StepType } from "../StepType";
 import './Step.css'
 

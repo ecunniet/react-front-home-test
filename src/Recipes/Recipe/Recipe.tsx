@@ -1,6 +1,6 @@
 import { RecipeType } from "../RecipeType";
 import Steps from "../../Steps/Steps";
-import IngredientsWithQuantity from "../../Ingredients/IngredientsWithQuantity/IngredientsWithQuantity";
+import IngredientsWithQuantity from "../../IngredientsWithQuantity/IngredientsWithQuantity";
 import { useState } from "react";
 import { Tags } from "../../Tags/Tags";
 import './Recipe.css'

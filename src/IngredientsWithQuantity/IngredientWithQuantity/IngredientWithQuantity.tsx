@@ -1,19 +1,20 @@
-import Ingredient from "../../Ingredient";
+import Ingredient from "./Ingredient/Ingredient";
 import { IngredientWithQuantityType } from "../IngredientWithQuantityType";
 import './IngredientWithQuantity'
 
-export const IngredientWithQuantity = ({
+const IngredientWithQuantity = ({
   ingredientWithQuantity,
 }: {
   ingredientWithQuantity: IngredientWithQuantityType;
 }) => {
+
+  const unitAndPrefixText = ingredientWithQuantity.unit ? `${ingredientWithQuantity.unit}\xA0${ingredientWithQuantity.ingredient.prefix}\xA0` : ''
+
   return (
     <div className="ingredient_with_quantity-container">
       {ingredientWithQuantity.quantity}
-      {ingredientWithQuantity.unit}
       &nbsp;
-      {ingredientWithQuantity.ingredient.prefix}
-      &nbsp;
+      {unitAndPrefixText}
       <Ingredient
         ingredient={ingredientWithQuantity.ingredient}
         quantity={ingredientWithQuantity.quantity}
@@ -21,3 +22,5 @@ export const IngredientWithQuantity = ({
     </div>
   );
 };
+
+export default IngredientWithQuantity;
