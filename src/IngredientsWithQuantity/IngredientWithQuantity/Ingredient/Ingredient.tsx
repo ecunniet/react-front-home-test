@@ -1,6 +1,6 @@
 import { IngredientType } from "./IngredientType";
 
-export const Ingredient = ({
+const Ingredient = ({
   ingredient,
   quantity,
 }: {

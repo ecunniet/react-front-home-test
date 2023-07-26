@@ -3,7 +3,7 @@ import Recipes from "./Recipes/Recipes";
 import { tagList } from "./Tags/TagData";
 import ActiveFilter from "./ActiveFilter/ActiveFilter";
 import { createContext, useState } from "react";
-import { Tags } from "./Tags/Tags";
+import Tags from "./Tags/Tags";
 import { TagType } from "./Tags/TagType";
 
 export const ActiveFilterContext =
@@ -13,7 +13,7 @@ export const ActiveFilterContext =
     removeFilter: () => { },
   })
 
-export default function App() {
+const App = () => {
   const [activeFilters, setActiveFilters] = useState<TagType[]>([])
 
   const addFilter = (filterToAdd: TagType) => {
@@ -37,3 +37,5 @@ export default function App() {
     </ActiveFilterContext.Provider>
   );
 }
+
+export default App;

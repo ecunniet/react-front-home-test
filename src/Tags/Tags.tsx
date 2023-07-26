@@ -1,8 +1,8 @@
-import { Tag } from "./Tag/Tag";
+import Tag from "./Tag/Tag";
 import { TagType } from "./TagType";
 import './Tags.css'
 
-export const Tags = ({ tags }: { tags: TagType[] }) => {
+const Tags = ({ tags }: { tags: TagType[] }) => {
   return (
     <div className="tags-container">
       {tags.map((obj) => (
@@ -11,3 +11,5 @@ export const Tags = ({ tags }: { tags: TagType[] }) => {
     </div>
   );
 };
+
+export default Tags;

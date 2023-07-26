@@ -2,7 +2,7 @@ import IngredientsWithQuantity from "../../IngredientsWithQuantity/IngredientsWi
 import { StepType } from "../StepType";
 import './Step.css'
 
-export const Step = ({ etape }: { etape: StepType }) => {
+const Step = ({ etape }: { etape: StepType }) => {
   return (
     <div className="step-container">
       <div>

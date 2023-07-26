@@ -5,7 +5,7 @@ import { useContext, useMemo } from "react";
 import { ActiveFilterContext } from "../App";
 import { filterRecipes } from "./RecipeData";
 
-export const Recipes = () => {
+const Recipes = () => {
   const { activeFilters } = useContext(ActiveFilterContext)
 
   const recipesList: ListOfRecipes = useMemo(() => filterRecipes(activeFilters), [activeFilters])

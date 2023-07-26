@@ -3,7 +3,7 @@ import { TagType } from "../TagType";
 import './Tag.css'
 import { ActiveFilterContext } from "../../App";
 
-export const Tag = ({ tag }: { tag: TagType }) => {
+const Tag = ({ tag }: { tag: TagType }) => {
   const { activeFilters, addFilter } = useContext(ActiveFilterContext)
   const selectedTag = activeFilters.includes(tag);
 
@@ -23,3 +23,5 @@ export const Tag = ({ tag }: { tag: TagType }) => {
     </button>
   );
 };
+
+export default Tag;
