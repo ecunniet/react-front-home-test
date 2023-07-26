@@ -38,6 +38,7 @@ import {
   vegan,
   winter,
 } from "../Tags/TagData";
+import { TagType } from "../Tags/TagType";
 
 const bretonPancakes: RecipeType = {
   name: "Crêpes bretonnes",
@@ -136,36 +137,7 @@ export const allRecipes: ListOfRecipes = [
   waldorfSalad,
 ];
 
-
-export const sugarRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const ingredientsList: string[] | undefined = recette.ingredients?.map(
-    (ingredient) => ingredient.name
-  );
-  return ingredientsList && ingredientsList.includes("sucre");
-});
-
-export const chocolateRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const ingredientsList: string[] | undefined = recette.ingredients?.map(
-    (ingredient) => ingredient.name
-  );
-
-  return ingredientsList && ingredientsList.includes("chocolat");
-});
-
-
-export const chocolateDessertRecipes: RecipeType[] = allRecipes.filter(
-  (recette) => {
-    const tagsString: string[] = recette.tags.map((tag) => tag.id);
-    const ingredientString: string[] = recette.ingredients
-      ? recette.ingredients.map((ingredient) => ingredient.name)
-      : [];
-    return (
-      tagsString.includes("dessert") && ingredientString.includes("chocolat")
-    );
-  }
-);
-
-export const filterRecipes = (activeTagFilters: string[]) => allRecipes.filter((recipe) => {
-  const recipesTags = recipe.tags.map((tag) => tag.id);
-  return activeTagFilters.every(tagFilter => recipesTags.includes(tagFilter));
+export const filterRecipes = (activeTagFilters: TagType[]) => allRecipes.filter((recipe) => {
+  const recipesTagsIds = recipe.tags.map((tag) => tag.id);
+  return activeTagFilters.every(tagFilter => recipesTagsIds.includes(tagFilter.id));
 });

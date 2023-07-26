@@ -4,24 +4,25 @@ import { tagList } from "./Tags/TagData";
 import ActiveFilter from "./ActiveFilter/ActiveFilter";
 import { createContext, useState } from "react";
 import { Tags } from "./Tags/Tags";
+import { TagType } from "./Tags/TagType";
 
 export const ActiveFilterContext =
-  createContext<{ activeFilters: string[], addFilter: (filterToAdd: string) => void, removeFilter: (filterToRemove: string) => void }>({
+  createContext<{ activeFilters: TagType[], addFilter: (filterToAdd: TagType) => void, removeFilter: (filterToRemove: TagType) => void }>({
     activeFilters: [],
     addFilter: () => { },
     removeFilter: () => { },
   })
 
 export default function App() {
-  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const [activeFilters, setActiveFilters] = useState<TagType[]>([])
 
-  const addFilter = (filterToAdd: string) => {
+  const addFilter = (filterToAdd: TagType) => {
     setActiveFilters((previousActiveFilters) => [...previousActiveFilters, filterToAdd])
   }
 
-  const removeFilter = (filterToRemove: string) => {
+  const removeFilter = (filterToRemove: TagType) => {
     setActiveFilters((previousActiveFilters) =>
-      previousActiveFilters.filter((element) => element !== filterToRemove)
+      previousActiveFilters.filter((element) => element.id !== filterToRemove.id)
     )
   }
 

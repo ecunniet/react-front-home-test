@@ -5,10 +5,10 @@ import { ActiveFilterContext } from "../../App";
 
 export const Tag = ({ tag }: { tag: TagType }) => {
   const { activeFilters, addFilter } = useContext(ActiveFilterContext)
-  const selectedTag = activeFilters.includes(tag.id);
+  const selectedTag = activeFilters.includes(tag);
 
   const onHandleFilter = useCallback(() => {
-    if (!selectedTag) addFilter(tag.id)
+    if (!selectedTag) addFilter(tag)
   }, [selectedTag])
 
   return (
@@ -16,7 +16,6 @@ export const Tag = ({ tag }: { tag: TagType }) => {
       className="tag-button"
       style={{
         backgroundColor: `${tag.color}`,
-        opacity: selectedTag ? 1 : 0.5,
       }}
       onClick={onHandleFilter}
     >
